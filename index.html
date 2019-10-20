@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>It's me</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+   <div class="wrap">
+      <div class="info">
+         <hr>
+         <div class="img"></div>
+         <h1>Александр Окунев</h1>
+         <h2>26.11.2001 (17 лет)</h2>
+         <h3>Челябинск</h3>
+         <h3>Опыт работы: пара простейших web-заказов</h3>
+         <hr>
+      </div>
+      <table>
+         <tr id = "i">
+            <td></td>
+            <td>Java</td>
+            <td>JavaScript</td>
+            <td>C++</td>
+            <td>C#</td>
+            <td>Swift</td>
+         </tr>
+         <tr>
+            <td>Отличное владение</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+         </tr>
+         <tr>
+            <td>Хорошее владение</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+         </tr>
+         <tr>
+            <td>Среднее владение</td>
+            <td>Нет</td>
+            <td>Да</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+         </tr>
+         <tr>
+            <td>Плохое владение</td>
+            <td>Нет</td>
+            <td>Да</td>
+            <td>Нет</td>
+            <td>Нет</td>
+            <td>Нет</td>
+         </tr>
+      </table>
+      <div id="in">
+         <div>
+            <span>Телефон</span>
+            <input type="text" placeholder="Phone">
+         </div>
+         <div>
+            <span>Имя</span>
+            <input type="text" placeholder="Name">
+         </div>
+      </div>
+      <div class="more">
+         <button>Больше информации</button>
+      </div>
+   </div>
+</body>
+<script>
+   // Знаю JS только как ЯП, с методами изменения страницы(dom и т.п) никогда не работал
+   document.getElementsByTagName('button')[0].onclick = show;
+   let showed = false;
+   function show() {
+      let div = document.createElement('div');
+      div.id = 'Info';
+      div.innerHTML = "<p>Каждый раз, когда просят рассказать о себе, не знаешь с чего начать и чем закончить, и что о тебе всё-таки хотят узнать. Поэтому о себе я ничего тут не напишу, а если кому-то будет интересно, расскажу лично :).</p>"
+      if (showed === false) {
+         document.getElementsByClassName('wrap')[0].append(div);
+         showed = true;
+      } else {
+         document.getElementById("Info").remove();
+         
+         showed = false;
+      }
+   }
+</script>
+</html>
